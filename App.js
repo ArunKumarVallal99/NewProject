@@ -3,11 +3,20 @@ import { Text, View } from 'react-native';
 
 const YourApp = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>
-        Hello World🌏 hi
-      </Text>
-    </View>
+    <View
+        style={{
+          height:500,
+          padding: 20
+        }}
+      >
+        <View style={{ backgroundColor: "blue", flex: 0.3 }} />
+        <View style={{ backgroundColor: "red", flex: 1 }} />
+        <View>
+
+        </View>
+        <Text style={{textAlign:"center"}}>Hello World!</Text>
+      </View>
+     
   );
 }
 
