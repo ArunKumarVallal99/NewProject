@@ -1,23 +1,53 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const YourApp = () => {
   return (
+    <SafeAreaView style={styles.safe}>
+      <ScrollView style={styles.scrollView}>
     <View
         style={{
-          height:500,
+         flex:5,
           padding: 20
         }}
       >
-        <View style={{ backgroundColor: "blue", flex: 0.3 }} />
-        <View style={{ backgroundColor: "red", flex: 1 }} />
-        <View>
-
-        </View>
-        <Text style={{textAlign:"center"}}>Hello World!</Text>
+        
+        <View style={styles.container} />
+        <View style={{ backgroundColor: "red",flex:5,height:1000, }} />
+        <Text style={styles.textarea}>EnterUser Name</Text>
+        <TextInput style={styles.input}/>
       </View>
+      </ScrollView>
+      </SafeAreaView>
      
   );
 }
+
+const styles= StyleSheet.create({
+safe:{
+  flex:1,
+
+},
+ container:{
+backgroundColor:"blue",
+flex:6,
+height:600,
+borderColor:'gray',
+borderWidth:5,
+},
+scrollView:{
+  backgroundColor:'pink',
+  
+},
+textarea:{
+borderColor:"gray",
+borderWidth:1,
+margin:10,
+},
+input:{
+  borderColor:'grey',
+  borderWidth:2,
+},
+});
 
 export default YourApp;
