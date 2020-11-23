@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SafeAreaView, Image,ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const YourApp = () => {
   return (
@@ -9,11 +9,14 @@ const YourApp = () => {
         style={{
          flex:5,
           padding: 20
-        }}
-      >
-        
+        }}>
         <View style={styles.container} />
         <View style={{ backgroundColor: "red",flex:5,height:1000, }} />
+       <View style={styles.viewimage}><Image
+        style={styles.tinyLogo}
+        source={{
+          uri: 'https://reactnative.dev/img/tiny_logo.png',
+        }}/></View>
         <Text style={styles.textarea}>EnterUser Name</Text>
         <TextInput style={styles.input}/>
       </View>
@@ -24,20 +27,19 @@ const YourApp = () => {
 }
 
 const styles= StyleSheet.create({
-safe:{
-  flex:1,
-
+tinyLogo:{
+  width:50,
+  height:50,
+  alignItems:'center',
 },
- container:{
+viewimage:{
+  alignItems:'center',
+},
+container:{
 backgroundColor:"blue",
-flex:6,
 height:600,
 borderColor:'gray',
 borderWidth:5,
-},
-scrollView:{
-  backgroundColor:'pink',
-  
 },
 textarea:{
 borderColor:"gray",
